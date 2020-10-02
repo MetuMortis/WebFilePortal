@@ -67,8 +67,6 @@ namespace FilePortal.Controllers
                     
                     DocumentDTO doc = new DocumentDTO();
                     string fileName = System.IO.Path.GetFileName(upload.FileName);
-                    // сохраняем файл в папку Files в проекте
-                    //upload.SaveAs(Server.MapPath("~/Files/" + fileName));
                     MemoryStream target = new MemoryStream();
                     upload.InputStream.CopyTo(target);
                     byte[] data = target.ToArray();
